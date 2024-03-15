@@ -1,0 +1,16 @@
+package com.example.customermanagement1demo.service;
+
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+
+import net.javaguides.springboot.model.Employee;
+
+public class EmployeeService {
+    List<Employee> getAllEmployees();
+    void saveEmployee(Employee employee);
+    Employee getEmployeeById(long id);
+    void deleteEmployeeById(long id);
+    Page<Employee> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection);
+}
